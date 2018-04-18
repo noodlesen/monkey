@@ -1,0 +1,22 @@
+@import "config";
+
+
+body {
+    color: $gray2;
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    line-height: 36px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+
+#header{
+    margin-top: 30px;
+}
+
+.green{
+    color: #30af4a
+}
+

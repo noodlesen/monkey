@@ -1,0 +1,43 @@
+{% load staticfiles %}
+
+{% load sass_tags %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800&subset=latin,cyrillic'
+            rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link href="{% sass_src 'scss/base.scss' %}" rel="stylesheet" type="text/css" />
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+            {% block header %}
+            <div id="header">
+                <img src="{% static 'images/mo_exp.svg' %}" alt="">
+            </div>
+            <div><span class="green">just a bunch of artists who want you to smile</span></div>
+            {% endblock %}
+        </div>
+    </div>
+    <div class="row">
+        {% block content %}{% endblock %}
+    </div>
+</div>
+
+    
+{% block scripts %}
+
+{% endblock %}
+
+</body>
+</html>
